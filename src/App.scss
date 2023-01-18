@@ -1,0 +1,64 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: white;
+}
+
+.App {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.time {
+  display: flex;
+  //   flex-direction: column;
+
+  .circular-symbol {
+    font-size: 12px;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: #999;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.circular-numeric {
+  display: flex;
+  //   border: 1px solid red;
+  //   overflow: hidden;
+
+  & > .circular-roller {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid orange;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+
+    & > .circular-digit {
+      display: flex;
+      flex-direction: column;
+      //   border: 1px solid green;
+
+      & > .circular-digit__digit {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
